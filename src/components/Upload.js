@@ -1,16 +1,25 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Typography, Card } from "@material-ui/core";
+import Dropzone from "react-dropzone";
 
 export default function Upload() {
-  const fileHandler = (e) => {
-    console.log(e.target.files[0]);
+  const fileHandler = (files) => {
+    console.log(files);
   };
   return (
     <div>
-      <Button variant="contained" component="label">
-        Upload File
-        <input type="file" hidden onChange={fileHandler} />
-      </Button>
+      <Dropzone onDrop={(acceptedFiles) => fileHandler(acceptedFiles)}>
+        {({ getRootProps, getInputProps }) => (
+          <section>
+            <Card {...getRootProps()} outline="primary">
+              <input {...getInputProps()} />
+              <Typography>
+                Drag 'n'drop some files here, or click to select files
+              </Typography>
+            </Card>
+          </section>
+        )}
+      </Dropzone>
     </div>
   );
 }
