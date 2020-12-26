@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Card } from "@material-ui/core";
 import Dropzone from "react-dropzone";
-import useAPI from "../hooks/uesAPI";
+import useAPI from "../hooks/useAPI";
 
 export default function Upload() {
   const API = useAPI();

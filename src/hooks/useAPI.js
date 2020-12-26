@@ -1,6 +1,6 @@
 const useAPI = () => {
   const sendFiles = (files) => {
-    alert(files);
+    return "hello world"
   };
 
   return { sendFiles };

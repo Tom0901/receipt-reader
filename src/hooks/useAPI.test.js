@@ -1,3 +1,7 @@
-import useAPI from "./uesAPI";
+import useAPI from "./useAPI";
 
-test("tests that api fn receives and returns correct data", () => {});
+const fns = useAPI();
+
+test("tests that api fn receives and returns correct data", () => {
+  expect(fns.sendFiles()).toBe("hello world");
+});
