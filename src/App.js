@@ -2,6 +2,7 @@ import "./App.css";
 import Upload from "./components/Upload";
 import Header from "./components/Header";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { Card } from "@material-ui/core";
 
 const theme = createMuiTheme({
   palette: {
@@ -16,10 +17,10 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      <Card className="App">
         <Header />
         <Upload />
-      </div>
+      </Card>
     </ThemeProvider>
   );
 }

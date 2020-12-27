@@ -1,0 +1,8 @@
+.vid {
+  height: 48.5vh;
+  margin: auto;
+}
+.vidContainer {
+  position: relative;
+  background-color: #92b0b3 !important;
+}
